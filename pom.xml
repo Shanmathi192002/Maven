@@ -45,6 +45,31 @@
         </plugins>
     </build>
 
+  <plugin>
+  <groupId>net.masterthought</groupId>
+  <artifactId>maven-cucumber-reporting</artifactId>
+  <version>5.7.0</version>
+  <executions>
+    <execution>
+      <id>generate-cucumber-reports</id>
+      <phase>test</phase>
+      <goals>
+        <goal>generate</goal>
+      </goals>
+      <configuration>
+        <projectName>CucumberOrangeHRM</projectName>
+        <outputDirectory>target/cucumber-reports</outputDirectory>
+        <jsonFiles>
+          <param>target/cucumber-reports/cucumber.json</param>
+        </jsonFiles>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+
+
+
+
   
 
 </project>
